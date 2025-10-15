@@ -55,6 +55,29 @@
     .faq.open h3::after {
       content: '−';
     }
+
+    /* Back/Navigation Buttons */
+    .buttons {
+      margin: 2em auto;
+      text-align: center;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #e67e22;
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 20px;
+      margin: 10px;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background 0.2s ease-in-out;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background: #cf6d19;
+    }
   </style>
 </head>
 <body>
@@ -86,6 +109,12 @@
       <button onclick="location.href='child-minding.html'">Child Minding</button>
       <button onclick="location.href='cooking.html'">Cooking</button>
       <button onclick="location.href='garden-maintenance.html'">Garden Maintenance</button>
+    </div>
+
+    <!-- NEW BUTTONS FOR NAVIGATION -->
+    <div class="buttons">
+      <button onclick="location.href='contact.html'" class="btn">Contact Us</button>
+      <button onclick="location.href='quote.html'" class="btn">Get a Quote</button>
     </div>
   </main>
 
@@ -130,3 +159,4 @@
   </script>
 </body>
 </html>
+
