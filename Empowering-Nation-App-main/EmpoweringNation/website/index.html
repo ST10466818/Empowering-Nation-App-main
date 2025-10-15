@@ -5,10 +5,61 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Empowering Nation</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* FAQ STYLING */
+    .faq-section {
+      max-width: 800px;
+      margin: 2em auto;
+      background: #fff;
+      padding: 2em;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .faq-section h2 {
+      color: #b76e79;
+      text-align: center;
+      margin-bottom: 1em;
+      font-size: 2em;
+    }
+
+    .faq {
+      margin-bottom: 1.5em;
+    }
+
+    .faq h3 {
+      color: #8b5a5a;
+      font-size: 1.2em;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .faq p {
+      margin-top: 0.5em;
+      line-height: 1.6;
+      color: #555;
+      display: none;
+    }
+
+    .faq.open p {
+      display: block;
+    }
+
+    .faq h3::after {
+      content: '+';
+      font-weight: bold;
+    }
+
+    .faq.open h3::after {
+      content: '−';
+    }
+  </style>
 </head>
 <body>
   <header>
-    <img src="images/logo.png" alt="Logo" class="logo">
+    <img src="images/logo.png" alt="Empowering Nation Logo" class="logo">
     <h1>Empowering Nation</h1>
   </header>
 
@@ -20,27 +71,62 @@
     </p>
   </section>
 
- 
-    <!-- COURSES -->
-  <head>
-  <meta charset="UTF-8">
-  <title>Courses we offer</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <h1>Six Month Courses</h1>
-  <div class="course-buttons">
-    <button onclick="location.href='firstaid.html'">First Aid</button>
-    <button onclick="location.href='sewing.html'">Sewing</button>
-    <button onclick="location.href='landscaping.html'">Landscaping</button>
-    <button onclick="location.href='life-skills.html'">Life Skills</button>
-  </div>
+  <!-- COURSES -->
+  <main>
+    <h1>Six Month Courses</h1>
+    <div class="course-buttons">
+      <button onclick="location.href='firstaid.html'">First Aid</button>
+      <button onclick="location.href='sewing.html'">Sewing</button>
+      <button onclick="location.href='landscaping.html'">Landscaping</button>
+      <button onclick="location.href='life-skills.html'">Life Skills</button>
+    </div>
 
-  <h1>Six Week Short Courses</h1>
-  <div class="course-buttons">
-    <button onclick="location.href='child-minding.html'">Child Minding</button>
-    <button onclick="location.href='cooking.html'">Cooking</button>
-    <button onclick="location.href='gardenmaintenance.html'">Garden Maintenance</button>
-  </div>
+    <h1>Six Week Short Courses</h1>
+    <div class="course-buttons">
+      <button onclick="location.href='child-minding.html'">Child Minding</button>
+      <button onclick="location.href='cooking.html'">Cooking</button>
+      <button onclick="location.href='garden-maintenance.html'">Garden Maintenance</button>
+    </div>
+  </main>
+
+  <!-- FAQ SECTION -->
+  <section class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq">
+      <h3>How do I enroll for a course?</h3>
+      <p>You can enroll by visiting our Courses section and selecting your preferred course, or by contacting us directly for assistance.</p>
+    </div>
+
+    <div class="faq">
+      <h3>Where are the courses held?</h3>
+      <p>All courses are conducted at our community training centre. The address and map will be made available to you once you contact us.</p>
+    </div>
+
+    <div class="faq">
+      <h3>Do I need any prior experience?</h3>
+      <p>No prior experience is required. Our programs are designed to accommodate beginners and experienced learners alike.</p>
+    </div>
+
+    <div class="faq">
+      <h3>What payment options are available?</h3>
+      <p>We accept cash payments, EFT, and payment plans for some courses. Fees must be paid in full before the course begins unless arranged otherwise.</p>
+    </div>
+
+    <div class="faq">
+      <h3>Will I receive a certificate?</h3>
+      <p>Yes. Upon successful completion of the course, you will receive a certificate of achievement from Empowering Nation.</p>
+    </div>
+  </section>
+
+  <!-- FAQ TOGGLE SCRIPT -->
+  <script>
+    const faqs = document.querySelectorAll('.faq h3');
+    faqs.forEach(question => {
+      question.addEventListener('click', () => {
+        question.parentElement.classList.toggle('open');
+      });
+    });
+  </script>
 </body>
 </html>
