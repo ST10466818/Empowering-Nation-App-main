@@ -1,4 +1,4 @@
-
+/* ========== OVERALL STYLES ========== */
 * {
   margin: 0;
   padding: 0;
@@ -9,84 +9,105 @@ body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
   color: #333;
-  background: #fefaf5; /* from Empowering Nations */
+  background: #fefaf5; /* Empowering Nations background */
   font-size: 1em;
   text-align: center;
 }
 
-/* ========== LOGO + HEADER ========== */
+/* ========== HEADER & LOGO ========== */
 header {
-  padding: 20px;
   background: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
 .logo {
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-.logo img {
-  width: 250px;  /* Use Empowering Nations logo here */
+  width: 250px;
   height: auto;
+  display: block;
+  margin: 0 auto 10px;
 }
 
 header h1 {
-  font-size: 1.8em;
-  margin-top: 10px;
+  font-size: 2em;
   color: #e67e22; /* Empowering Nations orange */
   font-weight: bold;
 }
 
-/* ========== NAVIGATION ========== */
-nav {
-  background: #e67e22; /* Empowering Nations accent */
-  padding: 1em 0;
-  text-align: center;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1em;
-}
-
-nav a {
-  text-decoration: none;
-  color: #fff;
-  font-weight: bold;
-  padding: 0.5em 1em;
-  display: block;
-  transition: background 0.2s;
-}
-
-nav a:hover {
-  background: #cf6d19;
-  border-radius: 5px;
-}
-
-/* ========== SECTIONS  ========== */
-section {
+/* ========== ABOUT SECTION ========== */
+.about {
   background: #fff;
   padding: 2em;
   margin: 2em auto;
-  max-width: 900px;
   border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  width: 80%;
+  max-width: 900px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   text-align: left;
 }
 
-section h2, 
-section h1 {
+.about h2 {
   text-align: center;
   color: #e67e22;
   margin-bottom: 1em;
 }
 
-section p {
-  color: #555;
+.about p {
   line-height: 1.8;
+  color: #555;
+  font-size: 1em;
 }
 
+/* ========== BUTTON SECTION ========== */
+.buttons {
+  margin: 2em auto;
+  text-align: center;
+}
 
+.btn {
+  display: inline-block;
+  background: #e67e22;
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 20px;
+  margin: 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.2s ease-in-out;
+}
+
+.btn:hover {
+  background: #cf6d19;
+}
+
+/* ========== RESPONSIVENESS ========== */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.8em;
+  }
+
+  .about {
+    width: 90%;
+    padding: 1.5em;
+  }
+
+  .logo {
+    width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 0.9em;
+  }
+
+  .logo {
+    width: 180px;
+  }
+
+  .btn {
+    width: 80%;
+    padding: 14px;
+    margin: 8px auto;
+  }
+}
